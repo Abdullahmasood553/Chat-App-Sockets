@@ -25,4 +25,4 @@ Route::post('/save_register', 'AuthController@save_register')->name('save_user')
 
 
 
-
+Route::get('/message/{id}', 'HomeController@getMessage')->name('message');
