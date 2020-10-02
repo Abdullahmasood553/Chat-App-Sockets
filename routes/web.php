@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('home', 'HomeController@home');
+Route::get('home', 'HomeController@home')->name('home');
+
+Route::get('/login', 'AuthController@login')->name('login');
+Route::post('/user_login', 'AuthController@user_login');
+Route::get('/logout', 'AuthController@logout')->name('logout');  
+
+
+Route::get('/register', 'AuthController@register');
+Route::post('/save_register', 'AuthController@save_register')->name('save_user');
+
+
 
 
